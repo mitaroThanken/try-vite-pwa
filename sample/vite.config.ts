@@ -29,7 +29,12 @@ export default defineConfig({
         'IE 11'
       ]
     }),
-    VitePWA({ registerType: "autoUpdate" })
+    VitePWA({
+      registerType: "autoUpdate",
+      devOptions: {
+        enabled: true
+      }
+    })
   ],
   server: {
     host: HOST,
