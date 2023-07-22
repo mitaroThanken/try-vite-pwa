@@ -6,7 +6,7 @@ import legacy from '@vitejs/plugin-legacy';
 
 const HOST = 'sample';
 const PORT = 5173;
-const VHOST_FQDN = process.env.VHOST_FQDN !== undefined ? process.env.VHOST_FQDN : "test.test";
+const VHOST_FQDN = process.env.VHOST_FQDN ?? "test.test";
 const HTTPS_OPTIONS: SecureContextOptions = {
   key: fs.readFileSync(`../certs/${VHOST_FQDN}/key.pem`),
   cert: fs.readFileSync(`../certs/${VHOST_FQDN}/cert.pem`)
