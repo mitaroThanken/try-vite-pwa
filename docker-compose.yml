@@ -1,6 +1,6 @@
 services:
   haproxy:
-    image: haproxy-with-minica/haproxy
+    image: try-vite-pwa/haproxy
     build:
       context: ./haproxy
       target: haproxy
@@ -20,7 +20,7 @@ services:
     depends_on:
       - sample
   sample:
-    image: haproxy-with-minica/sample
+    image: try-vite-pwa/sample
     build:
       context: ./sample/.devcontainer
       args:

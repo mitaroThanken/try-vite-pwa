@@ -1,4 +1,4 @@
-HAProxy with jsha/minica
+Try [Vite PWA](https://vite-pwa-org.netlify.app)
 ===
 
 Modify virtual host's name
@@ -10,7 +10,7 @@ Export certs
 ---
 
 ```shell
-docker container cp haproxy-with-minica-haproxy-1:/usr/local/etc/haproxy/certs - | tar xv
+docker container cp try-vite-pwa-haproxy-1:/usr/local/etc/haproxy/certs - | tar xv
 ```
 
 Install trusted root certification
