@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react-swc'
 import fs from 'fs';
 import { SecureContextOptions } from 'tls';
 import legacy from '@vitejs/plugin-legacy';
+import { VitePWA } from 'vite-plugin-pwa';
 
 const HOST = 'sample';
 const PORT = 5173;
@@ -27,7 +28,9 @@ export default defineConfig({
         'not op_mini all',
         'IE 11'
       ]
-    })],
+    }),
+    VitePWA({ registerType: "autoUpdate" })
+  ],
   server: {
     host: HOST,
     origin: `${PROTOCOL}${VHOST_FQDN}`,
